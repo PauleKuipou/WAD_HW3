@@ -11,5 +11,5 @@ Paule Leslie Kuipou
 * Here is the link to validate the JSON file 2-online json validator: https://jsonlint.com/ &
 3-online json hosting: https://jsonlint.com/
 
-HTML and CSS files are in the public folder
+* HTML and CSS files are in the public folder
 Components folder is also in public folder
