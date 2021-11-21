@@ -6,7 +6,7 @@
       <div class="clear-button">
         <button v-on:click="clickedClear">Clear likes</button>
       </div>
-        <posts/>
+      <posts/>
     </div>
     <div class="side" id="right_side"></div>
   </div>
@@ -14,6 +14,7 @@
 
 <script>
 import posts from '../components/posts.vue';
+
 export default {
   name: "main_page_compo",
   components: {posts},
@@ -39,12 +40,14 @@ export default {
   background-color: #1778bd;
   width: 33%;
 }
+
 .center {
   background-color: white;
   width: 60%;
   height: 100%;
 }
-.clear-button > button{
+
+.clear-button > button {
   border: 1px solid #1778BD;
   width: 20%;
   margin-top: 5px;
@@ -53,7 +56,8 @@ export default {
   font-weight: bold;
   background-color: white;
 }
-.clear-button button:hover{
+
+.clear-button button:hover {
   background-color: skyblue;
 }
 </style>

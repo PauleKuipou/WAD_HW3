@@ -1,25 +1,25 @@
 <template>
-<div>
-  <nav>
-    <div>
-      <img class="calendar" src="../photos/calendar-icon.png" alt="Calendar icon">
+  <div>
+    <nav>
+      <div>
+        <img class="calendar" src="../photos/calendar-icon.png" alt="Calendar icon">
+      </div>
+      <div class="search-container">
+        <input type="text">
+        <button>Search</button>
+      </div>
+      <div id="account">
+        <img class="userImg" type="image" src="../photos/account.png" id="userButton" alt="user"/>
+      </div>
+      <br>
+    </nav>
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      |
+      <router-link to="/about">About</router-link>
+      |
+      <router-link :to="{ name: 'contact us' }"> Contact us</router-link>
     </div>
-    <div class="search-container">
-      <input type="text">
-      <button>Search</button>
-    </div>
-    <div id="account">
-      <img class="userImg" type="image" src="../photos/account.png" id="userButton" alt="user"/>
-    </div>
-    <br>
-  </nav>
-  <div id="nav">
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/about">About</router-link>
-    |
-    <router-link :to="{ name: 'contact us' }"> Contact us</router-link>
-  </div>
   </div>
 </template>
 
@@ -38,6 +38,7 @@ header {
   align-items: center;
   width: 100%;
 }
+
 nav {
   display: flex;
   align-items: center;
@@ -54,6 +55,7 @@ nav div img {
   display: flex;
   justify-content: flex-start;
 }
+
 nav div.search-container > input {
   box-sizing: border-box;
   height: 30px;
@@ -77,9 +79,11 @@ nav div.search-container > button {
   color: white;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
+
 .search-container button:hover {
   background-color: skyblue;
 }
+
 #account {
   margin-right: 10px;
   display: flex;
