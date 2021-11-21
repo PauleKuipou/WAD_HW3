@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div class="post" v-for="post in postos" :key="post.id">
-      <h3>nsdkncks</h3>
-      <div class="post-title" id="post-title">
-        <div class="post-actions" id="post-actions">
-          <span class="post-author" id="post-author">
-            <span class="post-author-info" id="post-author-infos">
-              <small>
-                {{ post.author_name }}
-              </small>
-            </span>
-            <small>{{ post.create_time }}</small>
-          </span>
-          <div class="post-image" v-if="post.post_img != null">
-            <img v-bind:src="post.post_img" alt="Post image" />
-          </div>
-        </div>
-        <h3>{{ post.post_content }}</h3>
+    <div class="post">
+      <div class="post-top">
+        <router-link to="/"
+          ><img src="../photos/account.png" alt="postIt" class="author-profile"
+        /></router-link>
+        <div class="author-name">Gloria Krieger</div>
+        <div>Feb 20, 1967 01:00</div>
+      </div>
+      <div class="post-image">
+        <img src="../photos/baby_yoda.jpg" alt="post photo" />
+      </div>
+      <br />Cute baby baby_yoda
+      <div class="like-button">
+        <button v-on:click="clickedLike">
+          <img src="../photos/likebutton.jpg" alt="Like button" />
+          Likes: {{ this.$store.state.likes }}
+        </button>
       </div>
     </div>
   </div>
@@ -24,26 +24,32 @@
 
 <script>
 export default {
-  name: "Post",
-  props: ["postos"],
+  name: "posts",
+  methods: {
+    clickedLike: function () {
+      this.$store.state.likes += 1;
+    },
+    
+  },
+
   computed: {
     myValue() {
       return {
-        postos: [
+        posts: [
           {
-            "id": "1",
-            "create_time": "Feb 20, 1967 01:00",
-            "author_name": "Kurt Cobain",
-            "post_content":
+            id: "1",
+            create_time: "Feb 20, 1967 01:00",
+            author_name: "Kurt Cobain",
+            post_content:
               "It's okay to eat fish because they don't have any feelings.",
-            "post_img": "",
+            post_img: "",
           },
           {
-            "id": "2",
-            "create_time": "Sep 20, 2021 18:18 ",
-            "author_name": "Gloria",
-            "post_content": "Cute baby Yoda",
-            "post_img": "baby_yoda.jpg",
+            id: "2",
+            create_time: "Sep 20, 2021 18:18 ",
+            author_name: "Gloria",
+            post_content: "Cute baby Yoda",
+            post_img: "baby_yoda.jpg",
           },
         ],
       };
@@ -54,26 +60,51 @@ export default {
 
 <style scoped>
 .post {
-  width: 80%;
-  margin: 15px auto;
-  box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
-  border-radius: 5px;
+  margin: 20px auto;
+  border: 1px solid darkgray;
+  border-radius: 5%;
+  width: 70%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px 5px gray;
 }
-.post .post-author {
-  padding: 10px;
+.post-top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  color: gray;
+  font-size: 15px;
 }
-.post .post-title ~ .post-actions {
-  padding: 10px;
+.author-profile {
+  display: flex;
+  flex-direction: row;
+  width: 30px;
 }
-.post .post-author .post-author-info small {
-  position: absolute;
-  top: 10px;
-  left: 35px;
+div + .post-image {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.author-profile .author-name {
+  align-self: flex-start;
+  padding-left: 5px;
 }
 
-.post .post-author .post-author-info + small {
-  float: right;
-  color: grey;
-  padding: 10px;
+.like-button button {
+  border: none;
+  padding: 5px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.like-button button:hover {
+  background-color: skyblue;
+}
+
+.like-button img {
+  height: 30px;
 }
 </style>

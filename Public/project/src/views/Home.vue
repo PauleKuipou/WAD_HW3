@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <header_compo/>
-    <h1> Posts</h1>
   <main_page_compo />
   <footer>
     <footer_compo/>

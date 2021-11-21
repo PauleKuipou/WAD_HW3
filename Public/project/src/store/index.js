@@ -1,7 +1,10 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: {
+    likes: 0
+
+  },
   mutations: {},
   actions: {},
   modules: {},
