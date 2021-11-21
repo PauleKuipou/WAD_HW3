@@ -1,4 +1,5 @@
 <template>
+<div>
   <nav>
     <div>
       <img class="calendar" src="../photos/calendar-icon.png" alt="Calendar icon">
@@ -18,6 +19,7 @@
     <router-link to="/about">About</router-link>
     |
     <router-link :to="{ name: 'contact us' }"> Contact us</router-link>
+  </div>
   </div>
 </template>
 
