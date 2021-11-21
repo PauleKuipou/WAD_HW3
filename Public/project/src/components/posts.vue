@@ -15,7 +15,7 @@
       <div class="like-button">
         <button v-on:click="clickedLike">
           <img src="../photos/likebutton.jpg" alt="Like button" />
-          Likes: {{ this.$store.state.likes }}
+           Likes: {{ this.$store.state.likes }}
         </button>
       </div>
     </div>
@@ -29,7 +29,7 @@ export default {
     clickedLike: function () {
       this.$store.state.likes += 1;
     },
-    
+
   },
 
   computed: {
@@ -76,11 +76,18 @@ export default {
   color: gray;
   font-size: 15px;
 }
+
 .author-profile {
   display: flex;
   flex-direction: row;
-  width: 30px;
+  width: 25px;
 }
+
+.author-name {
+  display: flex;
+  justify-content: flex-start;
+}
+
 div + .post-image {
   display: flex;
   justify-content: center;
@@ -88,16 +95,14 @@ div + .post-image {
   padding-top: 10px;
   overflow: hidden;
 }
-.author-profile .author-name {
-  align-self: flex-start;
-  padding-left: 5px;
-}
 
 .like-button button {
   border: none;
   padding: 5px;
   background-color: white;
   margin-top: 10px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .like-button button:hover {

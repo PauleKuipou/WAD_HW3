@@ -1,11 +1,11 @@
 <template>
   <div class="layout">
     <div class="side">
+    </div>
+    <div class="center" id="post_container">
       <div class="clear-button">
         <button v-on:click="clickedClear">Clear likes</button>
       </div>
-    </div>
-    <div class="center" id="post_container">
         <posts/>
     </div>
     <div class="side" id="right_side"></div>
@@ -44,12 +44,16 @@ export default {
   width: 60%;
   height: 100%;
 }
-.clear-button {
-  border: none;
-  padding: 5px;
-  margin-top: 100px;
-  
+.clear-button > button{
+  border: 1px solid #1778BD;
+  width: 20%;
+  margin-top: 5px;
   align-self: center;
-
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  background-color: white;
+}
+.clear-button button:hover{
+  background-color: skyblue;
 }
 </style>

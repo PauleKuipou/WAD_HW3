@@ -85,24 +85,4 @@ nav div.search-container > button {
   display: flex;
   justify-content: flex-end;
 }
-
-.dropdown-content p {
-  color: black;
-  display: block;
-  text-align: left;
-  padding: 0px 0px 0px 10px;
-  margin-top: -5px;
-  margin-left: -10px;
-
-}
-
-.dropdown-content a {
-  color: #0277bd;
-  display: block;
-  text-align: left;
-  margin: 0 -10px;
-  padding: 10px 0px 10px 10px;
-  border-top: 1px solid;
-  border-color: #8a8a8a transparent transparent transparent;
-}
 </style>
