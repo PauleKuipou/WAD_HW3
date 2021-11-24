@@ -14,7 +14,7 @@
       <br/>{{post.post_content}}
       <div class="like-button">
         <button v-on:click="clickedLike">
-          <img src="../photos/likebutton.jpg" alt="Like button"/>
+          <img src="../photos/like_button.jpg" alt="Like button"/>
           Likes: {{ post.like }}
         </button>
       </div>
@@ -27,8 +27,6 @@ export default {
   name: "posts",
   methods: {
     clickedLike: function () {
-
-
     },
 
   },
