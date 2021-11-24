@@ -6,10 +6,6 @@ Team members:
 * Henri Laats,
 * Paule Leslie Kuipou
 
-
-Here is the link to validate the JSON file 2-online json validator: https://jsonlint.com/ &
-3-online json hosting: https://jsonlint.com/
-
 To run the project:
 * Step 1: cd project
 * Step 2: npm install
