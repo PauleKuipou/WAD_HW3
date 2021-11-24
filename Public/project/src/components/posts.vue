@@ -1,21 +1,21 @@
 <template>
   <div>
-    <div class="post">
+    <div class="post" v-for="post in myValue" :key="post.id">
       <div class="post-top">
         <router-link to="/"
         ><img src="../photos/account.png" alt="postIt" class="author-profile"
         /></router-link>
-        <div class="author-name">Gloria Krieger</div>
-        <div>Feb 20, 1967 01:00</div>
+        <div class="author-name">{{ post.author_name }}</div>
+        <div> {{ post.create_time }}</div>
       </div>
       <div class="post-image">
-        <img src="../photos/baby_yoda.jpg" alt="post photo"/>
+        <img :src='post.post_img' alt="post photo"/>
       </div>
-      <br/>Cute baby baby_yoda
+      <br/>{{post.post_content}}
       <div class="like-button">
         <button v-on:click="clickedLike">
           <img src="../photos/likebutton.jpg" alt="Like button"/>
-          Likes: {{ this.$store.state.likes }}
+          Likes: {{ post.like }}
         </button>
       </div>
     </div>
@@ -27,32 +27,15 @@ export default {
   name: "posts",
   methods: {
     clickedLike: function () {
-      this.$store.state.likes += 1;
+
+
     },
 
   },
 
   computed: {
     myValue() {
-      return {
-        posts: [
-          {
-            id: "1",
-            create_time: "Feb 20, 1967 01:00",
-            author_name: "Kurt Cobain",
-            post_content:
-                "It's okay to eat fish because they don't have any feelings.",
-            post_img: "",
-          },
-          {
-            id: "2",
-            create_time: "Sep 20, 2021 18:18 ",
-            author_name: "Gloria",
-            post_content: "Cute baby Yoda",
-            post_img: "baby_yoda.jpg",
-          },
-        ],
-      };
+      return this.$store.state.posts
     },
   },
 };
