@@ -7,7 +7,7 @@ Team members:
 * Paule Leslie Kuipou
 
 
-* Here is the link to validate the JSON file 2-online json validator: https://jsonlint.com/ &
+Here is the link to validate the JSON file 2-online json validator: https://jsonlint.com/ &
 3-online json hosting: https://jsonlint.com/
 
 To run the project:
