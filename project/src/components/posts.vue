@@ -23,9 +23,7 @@
 <script>
 export default {
   name: "posts",
-  methods: {
-    clickedLike: function () {}
-  },
+  methods: {},
   computed: {
     myValue() {
       return this.$store.state.posts;

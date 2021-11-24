@@ -41,14 +41,6 @@ export default {
 </script>
 
 <style scoped>
-header {
-  top: 0px;
-  position: fixed;
-  display: flex;
-  background-color: white;
-  align-items: center;
-  width: 100%;
-}
 nav {
   display: flex;
   align-items: center;
